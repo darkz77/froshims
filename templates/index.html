@@ -1,7 +1,7 @@
 {% extends "layout.html" %}
 
 {% block body %}
-    <h1>Register</h1>
+    <!-- <h1>Register</h1>
     <form action="/register" method="post">
         <input autofocus autocomplete="off" name="name" placeholder="Name" type="text">
         {% for sport in sports %}
@@ -9,6 +9,18 @@
         {% endfor %}
 
         <button type="submit">Register</button>
-    </form>
+    </form> -->
+
+    {% if name %}
+
+        You are logged in as {{ name }}
+        <a href="/logout">Logout</a>
+    
+    {% else %}
+
+        You are not logged in
+        <a href="/login">Login</a>
+
+    {% endif %}
 
 {% endblock %}
