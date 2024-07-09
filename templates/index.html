@@ -1,26 +1,52 @@
 {% extends "layout.html" %}
 
+{% block head %}
+    <style>
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+
+        .logo {
+            float: left;
+            margin-left: 20px;
+        }
+
+        nav {
+            float: right;
+            margin-right: 20px;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+
+        nav ul li a {
+            color: black;
+            text-decoration: none;
+        }
+    </style>
+{% endblock %}
+
 {% block body %}
-    <!-- <h1>Register</h1>
-    <form action="/register" method="post">
-        <input autofocus autocomplete="off" name="name" placeholder="Name" type="text">
-        {% for sport in sports %}
-            <input type="checkbox" value="{{ sport }}"> {{sport}}            
-        {% endfor %}
-
-        <button type="submit">Register</button>
-    </form> -->
-
-    {% if name %}
-
-        You are logged in as {{ name }}
-        <a href="/logout">Logout</a>
-    
-    {% else %}
-
-        You are not logged in
-        <a href="/login">Login</a>
-
-    {% endif %}
-
+    <div class="logo">
+        <img src= "bussiness-man.png" alt="Logo" width="50" height="50">
+    </div>
+    <nav>
+        <ul>
+            <li><a href="/#About-me">About Me</a></li>
+            <li><a href="/#My works profile">My work’s profile</a></li>
+            <li><a href="/#motto">Motto</a></li>
+            <li><a href="/#hobbies">Hobbies</a></li>
+            <li><a href="/#Contact">Contact</a></li>
+        </ul>
+    </nav>
 {% endblock %}
